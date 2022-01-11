@@ -16,8 +16,22 @@ service wallet Secret : JqqB1Jh47HFIBM7Yr8tinxSB6bQLdBBpmL44eqHvjkM=
 
 
 owWallet
-wallet address : 	tlink1gqjznvpudy8pwzf6lknx6z4ykvxlpzx7el7qyf
+wallet address : tlink1gqjznvpudy8pwzf6lknx6z4ykvxlpzx7el7qyf
 wallet Secret : 0AWKQhjicK4DAhza+nE6QdZ7CVVcxWT78gQ+CAM/Pho=
+
+
+testWallet
+wallet address : tlink1pc09lsppcgv2xmetp2hzje0u4cewnthc49yx2p
+wallet secret : 5euUWJn5IXJja7IoCkEIoDaz3+EPIZhAJG68Wxilljo=
+
+testWallet2
+wallet address : tlink1yefgfalm90xf2mn6wln7mfu0n26y00l9cftpda
+wallet secret : E5B1fwBeRKOKqrjZ3nzvSeXloD8sPNlrrf7F6NGVMEk=
+
+testWallet3
+wallet address : tlink1fvggch73267d5xdpj7ph8puflves8y5eng59lt
+wallet secret : EnAnF2q1IS0ZRBXMJHhBTX8aZOmixlIymr1ze9vqL0E=
+
 
 
 MovieToken - MOV
@@ -26,3 +40,4 @@ Contract ID : bfe8a2db
 
 
 item token contract ID : 92e755ee
+

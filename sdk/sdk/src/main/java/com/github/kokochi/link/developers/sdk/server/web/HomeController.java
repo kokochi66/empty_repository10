@@ -1,16 +1,11 @@
 package com.github.kokochi.link.developers.sdk.server.web;
 
-import com.github.kokochi.link.developers.sdk.api.ApiClient;
-import com.github.kokochi.link.developers.sdk.http.Utils;
-import com.github.kokochi.link.developers.sdk.model.request.Request;
-import com.github.kokochi.link.developers.sdk.model.request.Request.*;
-import com.github.kokochi.link.developers.sdk.model.response.Response.*;
+import com.github.kokochi.link.developers.sdk.blockchain.api.ApiClient;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @Log4j2
@@ -19,8 +14,17 @@ public class HomeController {
     @Autowired
     private ApiClient apiClient;
 
-    @GetMapping("")
-    public String home() {
+    @GetMapping("/")
+    public ModelAndView home(ModelAndView mav) {
+
+        log.info("/ - 메인 페이지");
+        mav.addObject("name","kokochi");
+        mav.setViewName("index");
+        return mav;
+    }
+
+    @GetMapping("/test")
+    public ModelAndView test(ModelAndView mav) {
 //        GenericResponse<WalletResponse> response = apiClient.wallet("tlink1dhtwpu3jnhtrna3caff544kswpql8dk28gfzqa");
 //        GenericResponse<Collection<WalletResponse>> response = apiClient.wallets();
 //        GenericResponse<Collection<TxResultResponse>> response = apiClient.transactionOfWallet("tlink1dhtwpu3jnhtrna3caff544kswpql8dk28gfzqa", System.currentTimeMillis(), null, null, null, null, null);
@@ -29,7 +33,6 @@ public class HomeController {
 //        request.setOwnerSecret("JqqB1Jh47HFIBM7Yr8tinxSB6bQLdBBpmL44eqHvjkM=");
 //        request.setName("weaponToken");
 //        request.setToAddress("tlink1gqjznvpudy8pwzf6lknx6z4ykvxlpzx7el7qyf");
-//
 //        GenericResponse<TransactionResponse> response = apiClient.mintNonFungible("92e755ee", "10000002", request);
 //        log.info("wallet response :: " + response.toString());
 
@@ -61,8 +64,9 @@ public class HomeController {
 //
 //        String res = utils.mapToBodyString(map);
 //        log.info("res :: " + res);
-
-        return "index";
+        log.info("/ - 메인 페이지");
+        mav.setViewName("test");
+        return mav;
     }
 
 
